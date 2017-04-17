@@ -11,5 +11,6 @@ public interface UserDao {
      void save(User user);
      boolean update(User user);
      boolean delate(User user);
+     User findById(int id);
      List<User> findAll();
 }
