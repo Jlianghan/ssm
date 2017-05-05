@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><wsdl:definitions name="UserService" targetNamespace="http://impl.service.baoy.com.cn/" xmlns:ns1="http://service.baoy.com.cn/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://impl.service.baoy.com.cn/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:import location="http://localhost:8080/webserviceserver/WebService/userService?wsdl=UserService.wsdl" namespace="http://service.baoy.com.cn/">
+    </wsdl:import>
+  <wsdl:binding name="UserServiceSoapBinding" type="ns1:UserService">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="addUser">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="addUser">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="addUserResponse">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="delUser">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="delUser">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="delUserResponse">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sayHello">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="sayHello">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="sayHelloResponse">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="allUser">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="allUser">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="allUserResponse">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="user">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="user">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="userResponse">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateUser">
+      <soap:operation soapAction="" style="rpc"></soap:operation>
+      <wsdl:input name="updateUser">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="updateUserResponse">
+        <soap:body namespace="http://service.baoy.com.cn/" use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserService">
+    <wsdl:port binding="tns:UserServiceSoapBinding" name="UserServiceImplPort">
+      <soap:address location="http://localhost:8080/webserviceserver/WebService/userService"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
